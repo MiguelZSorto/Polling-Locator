@@ -32,7 +32,7 @@ router.get("/locations", (req, res) => {
     }
     
     let query = encodeURI(`${req.query.address} ${req.query.city} ${req.query.state}`);
-    request.get(`https://www.googleapis.com/civicinfo/v2/voterinfo?key=${process.env.CIVIC_KEY}&address=${query}`, (error, response, body) => {
+    request.get(`https://www.googleapis.com/civicinfo/v2/voterinfo?key=${process.env.AIzaSyAOaLbUEf85DngxQe7ukimu2vpW7atozzU}&address=${query}`, (error, response, body) => {
 		if(error){
 			console.error(error);
 			res.send(error);
